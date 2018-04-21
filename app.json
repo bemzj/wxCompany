@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/about/about",
+    "pages/contact/contact",
+    "pages/index/index",
+    "pages/case/case"
+    
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "恒帝科技有限公司",
+    "navigationBarTextStyle":"black",
+    "backgroundColor":"#f3f3f3"
+  },
+  "tabBar":{
+    "position":"bottom",
+    "backgroundColor":"#2f2f2f",
+    "color":"#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/case/case",
+        "text": "日志"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于我们"
+      },
+      {
+        "pagePath": "pages/contact/contact",
+        "text": "联系我们"
+      }
+    ]
+  }
+}
