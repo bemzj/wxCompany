@@ -1,6 +1,29 @@
-<switch wx:for="{{objectArray}}"  style="display: block;" > {{item.id}} {{item.unique}}</switch>
-<button bindtap="switch"> Switch </button>
-<button bindtap="addToFront"> Add to the front </button>
-
-<switch wx:for="{{numberArray}}" wx:key="*this" style="display: block;"> {{item}} </switch>
-<button bindtap="addNumberToFront"> Add to the front </button>
+<view class='wrap'>
+  <view class="head">
+    <image  src="{{topBj}}"  mode='widthFix' alt=""></image>
+    <view class="head-search clearfloat">
+      <view>
+          <image  src="{{logo}}" mode='widthFix' alt=""></image>
+      </view>
+      <view>
+           <input type="text" placeholder="输入关键字搜索" placeholder-class='inputPlaceholder' confirm-type='发送' /> 
+      </view>
+    </view>
+    <view class="head-title">
+      <view>恒帝科技精选案例展示</view>
+      <view>HENGDIKEJI SELECTED CASE DISPLAY</view>
+    </view>
+  </view>
+  <view class="list1">
+    <view class="clearfloat">
+        <view  class="{{statusClass[item.status]}}" wx:for="{{nav}}" wx:key="index">
+            <view hover-class="none">{{item.navMame}}</view>
+        </view>
+    </view>
+  </view>
+  <view class="list2 clearfloat">
+    <view  class="row {{cSel[item.status]}}" wx:for="{{classify}}" wx:key="index">
+        <view>{{item.cName}}</view>
+    </view>
+  </view>
+</view>

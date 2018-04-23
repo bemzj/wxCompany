@@ -1,11 +1,10 @@
 {
   "pages":[
+    "pages/case/case",
     "pages/about/about",
     "pages/contact/contact",
     "pages/index/index",
-    "pages/case/case"
-    
-    
+    "pages/caseDetails/caseDetails"
   ],
   "window":{
     "backgroundTextStyle":"light",

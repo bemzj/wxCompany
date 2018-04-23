@@ -30,3 +30,12 @@ page{
     height: auto;
     margin: 0 auto
 }
+view{
+    box-sizing: border-box;
+}
+.clearfloat::after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0; }
