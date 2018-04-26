@@ -39,12 +39,21 @@ page{
         color: #fff;
         border: 0;
         }
+        
       .wrap .head .head-search > view:last-child .inputPlaceholder {
-        background: url("http://www.hengdikeji.com/home/img/icon04.png") no-repeat;
+         background: url("http://www.hengdikeji.com/home/img/icon04.png") no-repeat; 
         background-size: 25rpx 25rpx;
         background-position: 30% center;
         text-align: center;
         color: #fff; }
+      .wrap .head .head-search > view:last-child .inputPlaceholder1{
+          background: url("http://www.hengdikeji.com/home/img/icon04.png") no-repeat; 
+        background-size: 25rpx 25rpx;
+        background-position: 0% center;
+        text-align: left;
+        color: #fff; 
+        text-indent: 35rpx;
+        }
   .wrap .head .head-title {
     position: absolute;
     bottom: 80rpx;
@@ -108,3 +117,64 @@ page{
 .wrap .list2 .row:nth-child(3n){
   margin-right: 0%;
 }
+
+.wrap .list3 {
+  padding: 20rpx 30rpx; }
+  .wrap .list3 .slide {
+    background-color: #fff;
+    -webkit-border-radius: 14rpx;
+    -moz-border-radius: 14rpx;
+    border-radius: 14rpx;
+    margin: 25rpx 0; }
+    .wrap .list3 .slide navigator {
+      display: block; }
+      .wrap .list3 .slide navigator > view:first-child {
+        width: 100%;
+        margin: 0 auto; }
+        .wrap .list3 .slide navigator > view:first-child image {
+          width: 100%; }
+      .wrap .list3 .slide navigator .slide1 {
+        border-bottom: 1px solid #f1f1f1;
+        padding: 20rpx 0rpx 5rpx 30rpx; }
+        .wrap .list3 .slide navigator .slide1 .slide1-title {
+          font-size: 36rpx;
+          color: #333333; }
+        .wrap .list3 .slide navigator .slide1 .slide1-title2 {
+          padding: 10rpx 0;
+          text-indent: 36rpx; }
+          .wrap .list3 .slide navigator .slide1 .slide1-title2 > view {
+            font-size: 0;
+            float: left;
+            margin-right: 10rpx; }
+          .wrap .list3 .slide navigator .slide1 .slide1-title2> view:nth-child(2) > view:first-child{
+            background-image: url("http://www.hengdikeji.com/home/img/icon03.png");
+          }
+            .wrap .list3 .slide navigator .slide1 .slide1-title2 > view view {
+              font-size: 22rpx;
+              color: #111111;
+              font-weight: lighter;
+              vertical-align: middle; }
+            .wrap .list3 .slide navigator .slide1 .slide1-title2 > view >view:first-child {
+              background: url("http://www.hengdikeji.com/home/img/icon02.png") no-repeat;
+              background-size: 30rpx auto;
+              background-position: 0 4rpx;
+              margin-right: 5rpx; }
+      .wrap .list3 .slide navigator .slide2 {
+        position: relative;
+        padding: 16rpx 0 16rpx 30rpx; }
+        .wrap .list3 .slide navigator .slide2 > view:first-child {
+          font-size: 0; }
+          .wrap .list3 .slide navigator .slide2 > view:first-child>view {
+            
+            font-size: 24rpx;
+            color: #333333; }
+          .wrap .list3 .slide navigator .slide2 > view:first-child > view> view{
+            display: inline;
+            color: #999999; }
+          .wrap .list3 .slide navigator .slide2 > view image {
+             position: absolute;
+          top: 50%;
+          margin-top: -15rpx;
+          right: 20rpx;
+          width: 18rpx;
+          height: 30rpx; }

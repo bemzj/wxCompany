@@ -13,6 +13,7 @@ page{
 }
 .banner{
   width: 100%;
+  font-size: 0;
 }
 .banner image{
   width: 100%;

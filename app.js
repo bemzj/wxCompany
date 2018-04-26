@@ -40,8 +40,5 @@ App({
     userInfo: null
   },
   onShow:function(){
-    wx.redirectTo({
-      url: 'pages/contact/contact'
-    })
   }
 })

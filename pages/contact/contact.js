@@ -52,27 +52,45 @@ Page({
         "size":'24rpx'
       }
     ],
-    navigation(e){
-      wx.getSetting({
-        success: (res) => {
-          console.log(res);
-          /*
-           * res.authSetting = {
-           *   "scope.userInfo": true,
-           *   "scope.userLocation": true
-           * }
-           */
-        }
-      });
-      wx.openLocation({
-        latitude: 23.0984195024,
-        longitude: 113.3826023340,
-        scale: 18,
-        name: '恒帝信息科技有限公司',
-        address: '广州市海珠区琶洲新村11栋710'
-      }) 
-    }
+    
   },
+  openPhone:function(e){
+      wx.makePhoneCall({
+        phoneNumber: this.data.infor[2].content
+      })
+  },
+  setClip: function (e) {
+    wx.setClipboardData({
+      data: this.data.infor[e.currentTarget.dataset.index].content,
+      success: function (res) {
+        wx.getClipboardData({
+          success: function (res) {
+            console.log(res.data) // data
+          }
+        })
+      }
+    })
+  },
+  // navigation(e) {
+  //   wx.getSetting({
+  //     success: (res) => {
+  //       console.log(res);
+  //       /*
+  //        * res.authSetting = {
+  //        *   "scope.userInfo": true,
+  //        *   "scope.userLocation": true
+  //        * }
+  //        */
+  //     }
+  //   });
+  //   wx.openLocation({
+  //     latitude: 23.0984195024,
+  //     longitude: 113.3826023340,
+  //     scale: 18,
+  //     name: '恒帝信息科技有限公司',
+  //     address: '广州市海珠区琶洲新村11栋710'
+  //   })
+  // }
   /**
    * 生命周期函数--监听页面加载
    */

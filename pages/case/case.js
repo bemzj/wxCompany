@@ -7,68 +7,906 @@ Page({
  data: {
    topBj:'http://www.hengdikeji.com/home/img/bj01.png',
    logo: 'http://www.hengdikeji.com/home/img/logo01.png',
-   statusClass:['','sel'],
-   nav:[
-      {
-        status:'1',
-        navMame:'全部'
-      },
-      {
-        status: '0',
-        navMame: 'H5案例'
-      },
-      {
-        status: '0',
-        navMame: '小程序'
-      },
-      {
-        status: '0',
-        navMame: '微商城'
-      },
-      {
-        status: '0',
-        navMame: '网页'
-      },
-      {
-        status: '0',
-        navMame: '移动app'
-      }
-   ],
-   navSrc:'../../pages/caseDetails/caseDetails',
-   cSel:["",'cSel'],
-   classify:[
-     {
-       status: '1',
-       cName: '全部'
-     },
-     {
-       status: '0',
-       cName: '邀请函'
-     },
-     {
-       status: '0',
-       cName: '产品推广'
-     },
-     {
-       status: '0',
-       cName: '投票'
-     },
-     {
-       status: '0',
-       cName: '小游戏'
-     },
-     {
-       status: '0',
-       cName: '品牌推广'
-     },
-     {
-       status: '0',
-       cName: '促销活动'
-     }
-   ]
+   navIndex: 0,
+   nav: [{
+     navMame: '全部',
+     classify: [
+       {
+         cName: '全部',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例1',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例1',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '邀请函',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '产品推广',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '投票',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '小游戏',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '品牌推广',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '促销活动',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       }
+     ]
+   },
+   {
+     navMame: 'H5案例',
+     classify: [
+       {
+         cName: '全部2',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '邀请函',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '产品推广',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '投票',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '小游戏',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '品牌推广',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '促销活动',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       }
+     ]
+       
+   },
+   {
+     navMame: '小程序',
+     classify: [
+       {
+         cName: '全部2',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '邀请函',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '产品推广',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '投票',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '小游戏',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '品牌推广',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '促销活动',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       }
+     ]
+   },
+   {
+     navMame: '微商城',
+     classify: [
+       {
+         cName: '全部2',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '邀请函',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '产品推广',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '投票',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '小游戏',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '品牌推广',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '促销活动',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       }
+     ]
+       
+   },
+   {
+     navMame: '网页',
+     classify: [
+       {
+         cName: '全部2',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '邀请函',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '产品推广',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '投票',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '小游戏',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '品牌推广',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '促销活动',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       }
+     ]  
+   },
+   {
+     navMame: '移动app',
+     classify: [
+       {
+         cName: '全部2',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '邀请函',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '产品推广',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '投票',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '小游戏',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季1',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '品牌推广',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季7',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季8',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       },
+       {
+         cName: '促销活动',
+         listData: [{
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季9',
+           look: 6785,
+           collect: 2345,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }, {
+           imgUrl: 'http://www.hengdikeji.com/home/img/img01.png',
+           url: '../../pages/caseDetails/caseDetails',
+           name: '好太太换购季10',
+           look: 6000,
+           collect: 2100,
+           firstName: 'H5案例',
+           secondName: '产品-产品推广'
+         }]
+       }
+     ]
+   }],
+   //小分类数据
+   classifyIndex:0,
+
+   inputIndex:0
   },
- selClass: function (e) {
-   
+  inputOut:function(e){
+    this.setData({
+      inputIndex:1
+    });
+  },
+  inputIn: function (e) {
+    this.setData({
+      inputIndex: 0
+    });
+  },
+  //大分类
+ navClass:function (e) {
+   this.setData({
+      navIndex:e.currentTarget.dataset.index,
+      classifyIndex:0
+   });
+ },
+ //小分类
+ classifyClass: function (e) {
+   this.setData({
+     classifyIndex: e.currentTarget.dataset.index
+   });
  },
   /**
    * 生命周期函数--监听页面加载
@@ -81,7 +919,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+     
   },
 
   /**
